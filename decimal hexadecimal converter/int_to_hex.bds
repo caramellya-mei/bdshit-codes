@@ -1,0 +1,6 @@
+$var[int;$message]
+
+$eval[$repeatMessage[6;%{DOL}%var[mod\;%{DOL}%modulo[%{DOL}%var[int\]\;16\]\]%{DOL}%var[int\;%{DOL}%calculate[%{DOL}%var[int\]/16\]\]%{DOL}%var[hex\;%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%var[mod\]\;10\;a\]\;11\;b\]\;12\;c\]\;13\;d\]\;14\;e\]\;15\;f\]%{DOL}%var[hex\]\]]]
+
+$c[output (as if it wasn't obvious enough already)]
+#$var[hex]
