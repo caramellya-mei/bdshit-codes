@@ -1,0 +1,14 @@
+$c[bartek.. if you want to make enableDecimals "works" for calculate, at least make the input gets converted to float so we don't have to put .0 into the numbers manually smh]
+$enableDecimals[yes]
+$var[in;$replaceText[$replaceText[$replaceText[$message;\];rbraket];$;moner];\;;smicol]]
+$var[s;%{DOL}%var[num\;]
+$var[e;\]%{DOL}%if[%{DOL}%and[%{DOL}%checkContains[%{DOL}%var[num\]\;.\]==false\]\]%{DOL}%var[num\].0%{DOL}%else %{DOL}%var[num\]%{DOL}%endif]
+$var[f;\]%{DOL}%if[%{DOL}%and[%{DOL}%checkContains[%{DOL}%var[num\]\;.\]==false\]\]%{DOL}%var[num\].0%{DOL}%else %{DOL}%var[num\]%{DOL}%endif%{DOL}%var[num\;]
+$var[raw;$var[s]$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$var[in]; ;];+;$var[f] + ];-;$var[f] - ];**;^];*;$var[f] * ];^;$var[f] ** ];/;$var[f] / ];%;$var[f] % ];(;( ];);$var[f] ) ]$var[e]]
+$var[expr;$replaceText[ $eval[$var[raw]]; .0;]]
+
+default: `$calculate[$message]`
+fixed: `$calculate[$var[expr]]`
+
+converted input:
+`$var[expr]`
