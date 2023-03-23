@@ -1,0 +1,9 @@
+$var[hex;$message]
+
+$textSplit[$var[hex];]
+$var[int;0]
+$var[i;$sub[$getTextSplitLength;1]]
+$eval[$textSplit[$var[hex];]%{DOL}%var[int\;%{DOL}%calculate[(%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[$joinSplitText[\;a\;10\]\;b\;11\]\;c\;12\]\;d\;13\]\;e\;14\]\;f\;15\]*(16**%{DOL}%var[i\]))+%{DOL}%var[int\]\]\]%{DOL}%var[i\;%{DOL}%sub[%{DOL}%var[i\]\;1\]\]%{DOL}%var[int\;%{DOL}%calculate[(%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[%{DOL}%replaceText[]\;a\;10\]\;b\;11\]\;c\;12\]\;d\;13\]\;e\;14\]\;f\;15\]*(16**%{DOL}%var[i\]))+%{DOL}%var[int\]\]\]%{DOL}%var[i\;%{DOL}%sub[%{DOL}%var[i\]\;1\]\]]
+
+$c[output]
+`$var[int]`
